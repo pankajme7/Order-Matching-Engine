@@ -1,0 +1,7 @@
+36
+Alice Buy 10 1000
+Bob Sell 20 2000
+Bob Sell 5 500
+Bob Buy 15 500
+Alice Buy 40 200
+Bob Sell 10 1000
