@@ -1,5 +1,9 @@
-It matches order based on price-priority. We have "Buy" and "Sell" order from different traders. We store that data in AVL trees
-and as required we execute order based on best available offer.
+It matches order based on price-priority. We have "Buy" and "Sell" order from different traders. As soon as an order is recieved we try to execute it. At any given point we can add buy and sell orders. There can be two cases.
+
+1. If there is a "buy" order and we have enough quantitiy in "sell". We find lowest buying price for that and make trade. If quantity is not enough we wait for more sell order.
+2. Similarly is there is "sell" order and we have enought quantity in "buy". We find the highest price to make trade. If quantity is not enough we wait for more buy orders.
+
+It's taken care that order placed first would be executed first.
 
 It is a c++11 project. It contains three classes.
 1. Trader - implements trader class which places order. Every trader has a unique ID "traderID".
